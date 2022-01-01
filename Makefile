@@ -1,6 +1,6 @@
 .PHONY : execute clean
 
-OUTPUT = programa.exe
+OUTPUT = program.exe
 MAIN_DEPENDENCIES = main-team-5.o functions-team-5.o
 
 execute : $(OUTPUT)
