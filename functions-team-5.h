@@ -3,6 +3,7 @@
 #define MAX 11
 #define OPTIONS_NUMBER 10
 
+// initial commit
 int fillArray(int array[N]);
 void printArray(int array[N], int startAt, int length, int breakLine);
 void printArray2D(int matrix[N][N]);
