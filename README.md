@@ -1,2 +1,2 @@
-# PL-project
-C programming project developed for the Programming Laboratories class
+# Programming Laboratories Project
+Programming project developed in the programming language C for the Programming Laboratories class.
