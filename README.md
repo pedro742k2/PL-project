@@ -16,6 +16,6 @@
 
 ## Características
 
-- **Número:** 15;
+- **Número do grupo:** 15;
 
-- **Código:** FB85BD.
+- **Código do trabalho:** FB85BD.
