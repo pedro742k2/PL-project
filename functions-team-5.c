@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #include "functions-team-5.h"
 
@@ -80,7 +81,7 @@ A função "printArray2D" imprime uma matriz do tipo N por N, com uma formataç�
 Retorno:
   - Esta função não retorna nada.
 */
-void printArray2D(int matrix[N][N])
+void printArray2D(int **matrix)
 {
   for (int i = 0; i < N; i++)
   {
@@ -523,13 +524,21 @@ void decomposeInPrimeNumbers(int array[N])
 A função "multiplyTwoArrays" multiplica dois vetores, sendo eles o vetor original passado como argumento formal e o vetor resultante da ordenação crescente do vetor original, resultando numa matriz do tipo N por N.
 
 Retorno:
-  - Esta função não retorna nada
+  - Esta função retorna uma matriz do tipo N por N (N*N).
 */
-void multiplyTwoArrays(int array[N], int matrix[N][N])
+int **multiplyTwoArrays(int array[N])
 {
   int sortedArray[N];
+  int **matrix;
 
-  // Ciclo para clonar o vetor original (array) para o vetor "sortedArray"
+  // Alocação de memória para as linhas e colunas da matriz.
+  matrix = malloc(sizeof(int *) * N);
+  for (int i = 0; i < N; i++)
+  {
+    matrix[i] = malloc(sizeof(int *) * N);
+  }
+
+  // Ciclo para clonar o vetor original (array) para o vetor "sortedArray".
   for (int i = 0; i < N; i++)
   {
     sortedArray[i] = array[i];
@@ -563,6 +572,8 @@ void multiplyTwoArrays(int array[N], int matrix[N][N])
   printf(" =\n");
   // Impressão da matriz resultante
   printArray2D(matrix);
+
+  return matrix;
 }
 
 /*
@@ -571,8 +582,18 @@ A função "transposeMatrix" calcula a matriz transposta da matriz calculada na 
 Retorno:
   - Esta função não retorna nada.
 */
-void transposeMatrix(int matrix[N][N], int transpose[N][N])
+void transposeMatrix(int **matrix)
 {
+  // Declaração da matriz transposta.
+  int **transpose;
+
+  // Alocação de memória das linhas e colunas da matriz
+  transpose = malloc(sizeof(int *) * N);
+  for (int i = 0; i < N; i++)
+  {
+    transpose[i] = malloc(sizeof(int *) * N);
+  }
+
   // Ciclo que calcula a matriz transposta a partir da matriz inicial.
   for (int i = 0; i < N; i++)
   {

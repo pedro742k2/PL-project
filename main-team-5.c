@@ -70,8 +70,8 @@ int main(void)
 
 		case 9:; // O ponto e vírgula tem como função terminar a "label" do "case", dado que está a ser declarada uma variável logo a seguir à declaração do "case".
 			// Cálcula a matriz 18x18 resultante do produto do vetor inicial com o mesmo vetor ordenado por ordem crescente.
-			int matrix[N][N];
-			multiplyTwoArrays(array, matrix);
+			// int matrix[N][N];
+			int **matrix = multiplyTwoArrays(array);
 			break;
 
 		case 10:
@@ -79,10 +79,8 @@ int main(void)
 			// Impressão da matriz inicial obtida na opção anterior (nove).
 			printf("Matriz inicial:\n");
 			printArray2D(matrix);
-			// Declaração da matriz transposta.
-			int transpose[N][N];
 			// Função que calcula e imprime a matriz transposta.
-			transposeMatrix(matrix, transpose);
+			transposeMatrix(matrix);
 			break;
 
 		default:
