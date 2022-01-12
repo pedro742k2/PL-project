@@ -1,8 +1,19 @@
 #include <stdio.h>
+#include <string.h>
 #include "functions-team-5.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
+	// Procura pelo argumento "--help" nos argumentos do terminal.
+	for (int i = 0; i < argc; i++)
+	{
+		// Compara a string argv[i] (vetor de argumentos) com a string "--help". Caso verdadeiro, retorna 0 (zero).
+		if (!strcmp(argv[i], "--help"))
+		{
+			printf("HELP PAGE!\n");
+		}
+	}
+
 	int array[N];
 
 	// Tenta preencher o vetor, armazenando na variável "isFilled" -1 ou 0, dependendo do sucesso no preenchimento do vetor.
@@ -70,7 +81,6 @@ int main(void)
 
 		case 9:; // O ponto e vírgula tem como função terminar a "label" do "case", dado que está a ser declarada uma variável logo a seguir à declaração do "case".
 			// Cálcula a matriz 18x18 resultante do produto do vetor inicial com o mesmo vetor ordenado por ordem crescente.
-			// int matrix[N][N];
 			int **matrix = multiplyTwoArrays(array);
 			break;
 
