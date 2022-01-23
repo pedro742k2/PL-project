@@ -1,7 +1,7 @@
 .PHONY : execute clean
 
 OUTPUT = program.exe
-MAIN_DEPENDENCIES = main-team-5.o functions-team-5.o
+MAIN_DEPENDENCIES = main-team-15.o functions-team-15.o
 
 execute : $(OUTPUT)
 
