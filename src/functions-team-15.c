@@ -1,15 +1,17 @@
+/**
+ * @file functions-team-15.c
+ * @authors Pedro Batista, Afonso Ferreira, Diogo Silva
+ * @brief Ficheiro com as funções auxiliares.
+ * @version 0.1
+ * @date 2022-01-29
+ * 
+ * @copyright Copyright (c) 2022 
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include "functions-team-15.h"
 
-/*
-A função "fillArray" preenche um vetor de N posições, cujas mesmas devem ser inteiras e compreendidas entre 1 e 11, inclusive.
-
-Esta função retorna:
-  a) -1, caso o utilizador insira -1 ao invés de uma entrada válida;
-  b) 0, caso o vetor seja preenchido com sucesso na sua totalidade.
- */
 int fillArray(int array[N])
 {
   // Mensagem introdutória
@@ -47,12 +49,6 @@ int fillArray(int array[N])
   return 0;
 }
 
-/*
-A função "printArray" imprime um vetor de N posições, com uma formatação específica, começando no segundo argumento formal "startAt" e terminando na posição "length"-1 (terceiro argumento formal subtraindo um). Caso breakLine seja verdadeiro (!= 0), a função faz uma quebra de linha no final da impressão do vetor.
-
-Retorno:
-  - Esta função não retorna nada.
-*/
 void printArray(int array[N], int startAt, int length, int breakLine)
 {
   // Imprime o vetor com uma formatação específica: {x1, x2, ..., xn}.
@@ -75,12 +71,6 @@ void printArray(int array[N], int startAt, int length, int breakLine)
   }
 }
 
-/*
-A função "printArray2D" imprime uma matriz do tipo N por N, com uma formatação específica.
-
-Retorno:
-  - Esta função não retorna nada.
-*/
 void printArray2D(int **matrix)
 {
   for (int i = 0; i < N; i++)
@@ -101,13 +91,6 @@ void printArray2D(int **matrix)
   }
 }
 
-/*
-A função "printMenu" exibe o menu principal do programa.
-
-Retornos:
-  a) -1, caso o utilizador insira -1 ao invés de uma opção válida;
-  b) n, sendo n a opção entre 1 e OPTIONS_NUMBER (número de opções válidas), inserida pelo utilizador
-*/
 int printMenu(void)
 {
   // Lista de opções numa matrix de caracteres, com a finalidade de facilitar a manutenção do menu principal, caso sejam adicionadas funcionalidades.
@@ -166,12 +149,6 @@ int printMenu(void)
   return option;
 }
 
-/*
-A função "printMatrix" imprime cria e imprime uma matriz do tipo 4*N, com uma formatação específica, onde cada linha é constituída pelo vetor armazenado de N elementos.
-
-Retorno:
-  - Esta função não retorna nada.
-*/
 void printMatrix(int array[N])
 {
   int matrix[4][N];
@@ -200,12 +177,6 @@ void printMatrix(int array[N])
   }
 }
 
-/*
-A função "calculateNaturalLog" calcula e imprime o logaritmo de base "e" (logaritmo natural) de todos os elementos do vetor (argumento formal) passado como argumento.
-
-Retorno:
-  - Esta função não retorna nada.
-*/
 void calculateNaturalLog(int array[N])
 {
   printf("ln(x) significa: Logaritmo natural de x.\n");
@@ -215,16 +186,6 @@ void calculateNaturalLog(int array[N])
   }
 }
 
-/* 
-A função "calculateNaturalLog" calcula e exibe a mediana dos elementos do vetor passado como argumento formal. Caso o número de elementos seja par, a mediana é calculada realizando a média dos dois valores centrais [(N/2)-1] e (N/2). Caso contrário, a mediana é o valor central dos elementos (N/2).
-
-Retorno:
-  - Esta função não retorna nada
-
-Observações:
-  - [(N/2)-1] deve-se à iteração dos elementos em computação começar por zero portanto, se o vetor tiver 18 elementos, as iterações vão de 0 a 17, e não de 1 a 18.
-  - Num vetor cujo total de elementos é ímpar (logo a mediana é o valor central), o número total de elementos a dividir por dois é um valor não inteiro. No entanto, em C, N/2 (tamanho a dividir por dois) retorna a divisão inteira, ou seja, apenas a parte inteira do valor (E.g.: 3.5 = 3). Com isto, podemos obter o valor central sem necessidade de arredondamentos.
-*/
 void calculateMedian(int array[N])
 {
   double mediana;
@@ -236,14 +197,10 @@ void calculateMedian(int array[N])
   printf("arredondada a duas casas decimais é: %.2lf.\n", mediana);
 }
 
-/* 
-A função "swap" troca entre si os valores armazenados em endereços diferentes.
+/**
+ @brief A função "swap" troca entre si os valores armazenados em endereços diferentes.
 
-Retorno:
-  - Esta função não retorna nada.
-
-Observação:
-  - Esta função não é prototipada no ficheiro "header" (functions-team-5.h) dado que é uma função auxiliar a outras funções neste mesmo ficheiro.
+ @note Esta função não é prototipada no ficheiro "header"" dado que é uma função auxiliar a outras funções neste mesmo ficheiro.
 */
 void swap(int *ptrX, int *ptrY)
 {
@@ -252,15 +209,6 @@ void swap(int *ptrX, int *ptrY)
   *ptrY = temp;
 }
 
-/* 
-A função "sortSimetricArray" cria um vetor cujas entradas são as simétricas do vetor original e, de seguida, ordena-as com o auxílio da função "swap", onde são recebidos dois parâmetros formais no formato de apontadores e são trocados entre si os valores respetivos aos endereços recebidos, permitindo assim ordenar o vetor simétrico.
-
-Retorno:
-  - Esta função não retorna nada.
-
-Observação:
-  - As operações realizadas são efetuadas num vetor localmente criado, não alterando o vetor original.
-*/
 void sortSimetricArray(int array[N])
 {
   // Vetor que irá armazenar as entradas simétricoas às do vetor original.
@@ -293,16 +241,17 @@ void sortSimetricArray(int array[N])
   printArray(simetricArray, 0, N, 1);
 }
 
-/*
-A função "notAdded" verifica se o valor passado como segundo argumento já se encontra no vetor passado como primeiro argumento, com a finalidade de não exibir valores repetidos no terminal.
-
-Retornos:
-  a) 0 (zero) caso o valor já se encontre no vetor passado como primeiro parâmetro formal.
-  b) 1 (um) caso o valor ainda não se encontre no vetor passado como primeiro parâmetro formal.
-
-Observação:
-  - Esta função não é prototipada no ficheiro "header" (functions-team-5.h) dado que é uma função auxiliar à função "gt2AndDivisibleBy5", localizada logo abaixo desta.
-*/
+/**
+ * @brief verifica se o valor passado como segundo argumento já se encontra no vetor passado como primeiro argumento, com a finalidade de não exibir valores repetidos no terminal.
+ * 
+ * @param addedValues Vetor a analisar.
+ * @param value Elemento a procurar no vetor "addedValues".
+ * 
+ * @note Esta função não é prototipada no ficheiro "header" (functions-team-5.h) dado que é uma função auxiliar à função "gt2AndDivisibleBy5", localizada logo abaixo desta.
+ * 
+ * @returns 0 (zero), caso o valor já se encontre no vetor passado como primeiro parâmetro formal.
+ * @returns 1, caso o valor ainda não se encontre no vetor passado como primeiro parâmetro formal.
+ */
 int notAdded(int addedValues[N], int value)
 {
   for (int i = 0; i < N; i++)
@@ -316,15 +265,6 @@ int notAdded(int addedValues[N], int value)
   return 1;
 }
 
-/*
-A função "gt2AndDivisibleBy5" exibe os valores maiores do que dois e divisíveis por cinco, relativamente ao vetor original.
-
-Retorno:
-  - Esta função não retorna nada.
-
-Observação:
-  - "gt2AndDivisibleBy5" significa "Greater than two and divisible by five".
-*/
 void gt2AndDivisibleBy5(int array[N])
 {
   // Vetor (addedValues) que irá armazenar os valores já adicionados, com a finalidade de não repetir números na impressão final. A variável "index" vai incrementando conforme valores vão sendo adicionados ao vetor "addedValues".
@@ -355,15 +295,6 @@ void gt2AndDivisibleBy5(int array[N])
   printf("\n");
 }
 
-/*
-A função "sumTwoHalfsArray" calcula a soma dos elementos da primeira metade com os da segunda metade, portanto, se o vetor original é: {1, 2, 3, 4, 5, 6}, o vetor resultante é: {1+4, 2+5, 3+6} = {5, 7, 9}, com metade do tamanho do original.
-
-Retorno:
-  - Esta função não retorna nada.
-
-Observações:
-  - O número de elementos do vetor deve ser par, caso contrário as operações sobre o mesmo não são realizadas.
-*/
 void sumTwoHalvesArray(int array[N])
 {
   // Verifica se o número de elementos é par.
@@ -395,12 +326,6 @@ void sumTwoHalvesArray(int array[N])
   }
 }
 
-/*
-A função "mixArrays" mistura a primeira metade do vetor original com a segunda metade de um novo vetor pedido, resultando num novo vetor.
-
-Retorno:
-  - Esta função não retorna nada.
-*/
 void mixArrays(int array[N])
 {
   // "newArray" é o vetor que armazenará os novos valores introduzidos pelo utilizador.
@@ -429,15 +354,14 @@ void mixArrays(int array[N])
   }
 }
 
-/*
-A função "resetArray" anula um array de "length" posições.
-
-Retorno:
-  - Esta função não retorna nada.
-
-Observação:
-  - Esta função não é prototipada no ficheiro "header" (functions-team-5.h) dado que é uma função auxiliar a outras funções neste mesmo ficheiro.
-*/
+/**
+ * @brief Anula um array de "length" posições.
+ * 
+ * @param length Tamanho do vetor.
+ * @param array Vetor cujos valores serão anulados.
+ * 
+ * @note Esta função não é prototipada no ficheiro "header" (functions-team-5.h) dado que é uma função auxiliar a outras funções neste mesmo ficheiro.
+ */
 void resetArray(int length, int array[length])
 {
   for (int i = 0; i < N; i++)
@@ -446,12 +370,6 @@ void resetArray(int length, int array[length])
   }
 }
 
-/*
-A função "decomposeInPrimeNumbers" decompõe, em fatores primos, todos os elementos do vetor passado como argumento formal que sejam ímpares.
-
-Retorno:
-  - Esta função não retorna nada.
-*/
 void decomposeInPrimeNumbers(int array[N])
 {
   // Vetor que irá armazenar os fatores de cada número ímpar do vetor.
@@ -520,12 +438,6 @@ void decomposeInPrimeNumbers(int array[N])
   }
 }
 
-/*
-A função "multiplyTwoArrays" multiplica dois vetores, sendo eles o vetor original passado como argumento formal e o vetor resultante da ordenação crescente do vetor original, resultando numa matriz do tipo N por N.
-
-Retorno:
-  - Esta função retorna uma matriz do tipo N por N (N*N).
-*/
 int **multiplyTwoArrays(int array[N])
 {
   int sortedArray[N];
@@ -576,12 +488,6 @@ int **multiplyTwoArrays(int array[N])
   return matrix;
 }
 
-/*
-A função "transposeMatrix" calcula a matriz transposta da matriz calculada na função imediatamente anterior.
-
-Retorno:
-  - Esta função não retorna nada.
-*/
 void transposeMatrix(int **matrix)
 {
   // Declaração da matriz transposta.
