@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "functions-team-5.h"
+#include "functions-team-15.h"
 
 /*
 A função "fillArray" preenche um vetor de N posições, cujas mesmas devem ser inteiras e compreendidas entre 1 e 11, inclusive.
@@ -115,7 +115,7 @@ int printMenu(void)
   char optionsList[OPTIONS_NUMBER][255] = {
       "Construir uma matriz do tipo 4xN cujas linhas são constituidas pelos elementos do vetor",
       "Calcular o logaritmo natural dos elementos do vetor",
-      "Calcular a mediada dos elementos do vetor",
+      "Calcular a mediana dos elementos do vetor",
       "Exibir o vetor simétrico e ordenado relativamente ao vetor original",
       "Exibir os valores do vetor maiores do que 2 e divisíveis por 5",
       "Exibir um vetor que resulta da soma da primeira com a segunda metade do vetor original",

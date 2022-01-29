@@ -13,4 +13,4 @@ $(OUTPUT) : $(MAIN_DEPENDENCIES)
 	gcc $< -c
 
 clean : 
-	rm *.o *.exe
+	rm *.o *.exe *.out
