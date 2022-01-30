@@ -1,7 +1,5 @@
 # 💻 Projeto - Laboratórios de Programação
 
-# 💼 Trabalho de grupo
-
 ## Constituição do grupo
 | Nome              | Número |
 |:-----------------:|:------:|
