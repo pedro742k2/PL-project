@@ -11,7 +11,14 @@
 #define N 18
 #define MIN 1
 #define MAX 11
-#define OPTIONS_NUMBER 10
+#define OPTIONS_NUMBER 11
+
+/**
+ @brief A função "helpPageRequest" exibe uma breve página de ajuda.
+
+ @details Mostra uma breve página de ajuda caso o utilizador selecione a respetiva opção no menu principal ou insira o argumento "--help" na linha de comandos ao executar o programa.
+*/
+void helpPageRequest(void);
 
 /**
  * @brief Preenche o vetor passado como argumento, com N posições.

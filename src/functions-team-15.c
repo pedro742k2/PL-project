@@ -12,6 +12,45 @@
 #include <math.h>
 #include "functions-team-15.h"
 
+void helpPageRequest(void)
+{
+  printf("\n------ PÁGINA DE AJUDA ------\n");
+  printf("Este programa calcula várias estatísticas e operações matemáticas baseadas no vetor introduzido inicialmente pelo utilizador, quando executado o programa. As opções disponíveis são as seguintes:\n\n");
+
+  printf("Nota: N = %d\n\n", N);
+  /// Opções disponíveis.
+  char optionsList[OPTIONS_NUMBER][255] = {
+      "Construir uma matriz do tipo 4xN cujas linhas são constituidas pelos elementos do vetor",
+      "Calcular o logaritmo natural dos elementos do vetor",
+      "Calcular a mediana dos elementos do vetor",
+      "Exibir o vetor simétrico e ordenado relativamente ao vetor original",
+      "Exibir os valores do vetor maiores do que 2 e divisíveis por 5",
+      "Exibir um vetor que resulta da soma da primeira com a segunda metade do vetor original",
+      "Página de ajuda",
+      "Misturar o vetor original com um novo vetor",
+      "Decompor números ímpares do vetor original em números primos",
+      "Cálculo da matriz NxN resultante do produto do vetor inicial com o mesmo vetor ordenado por ordem crescente",
+      "Cálculo da matriz transposta obtida a partir da matriz calculada na opção anterior (nove)"};
+
+  /// Impressão das opções disponíveis.
+  for (int i = 0; i < OPTIONS_NUMBER; i++)
+  {
+    // Formatação: Caso seja a última iteração, a mesma acaba com ponto e vírgula, por exemplo:
+    // x.) Penúltima opção;
+    // y.) Última opção.
+    printf("(%d) %s", i + 1, optionsList[i]);
+    if (i != OPTIONS_NUMBER - 1)
+    {
+      printf(";\n");
+    }
+    else
+    {
+      printf(".\n");
+    }
+  }
+  printf("\n");
+}
+
 int fillArray(int array[N])
 {
   // Mensagem introdutória
@@ -94,7 +133,7 @@ void printArray2D(int **matrix)
 int printMenu(void)
 {
   // Lista de opções numa matrix de caracteres, com a finalidade de facilitar a manutenção do menu principal, caso sejam adicionadas funcionalidades.
-  // "OPTIONS_NUMBER" é uma macro definida no ficheiro "functions-team-5.h".
+  // "OPTIONS_NUMBER" é uma macro definida no ficheiro "functions-team-15.h".
   char optionsList[OPTIONS_NUMBER][255] = {
       "Construir uma matriz do tipo 4xN cujas linhas são constituidas pelos elementos do vetor",
       "Calcular o logaritmo natural dos elementos do vetor",
@@ -102,6 +141,7 @@ int printMenu(void)
       "Exibir o vetor simétrico e ordenado relativamente ao vetor original",
       "Exibir os valores do vetor maiores do que 2 e divisíveis por 5",
       "Exibir um vetor que resulta da soma da primeira com a segunda metade do vetor original",
+      "Página de ajuda",
       "Misturar o vetor original com um novo vetor",
       "Decompor números ímpares do vetor original em números primos",
       "Cálculo da matriz NxN resultante do produto do vetor inicial com o mesmo vetor ordenado por ordem crescente",
@@ -115,9 +155,9 @@ int printMenu(void)
   for (int i = 0; i < OPTIONS_NUMBER; i++)
   {
     // Formatação: Caso seja a última iteração, a mesma acaba com ponto e vírgula, por exemplo:
-    // x.) Penúltima opção;
-    // y.) Última opção.
-    printf("%d.) %s", i + 1, optionsList[i]);
+    // (x) Penúltima opção;
+    // (y) Última opção.
+    printf("(%d) %s", i + 1, optionsList[i]);
     if (i != OPTIONS_NUMBER - 1)
     {
       printf(";\n");
@@ -200,7 +240,7 @@ void calculateMedian(int array[N])
 /**
  @brief A função "swap" troca entre si os valores armazenados em endereços diferentes.
 
- @note Esta função não é prototipada no ficheiro "header"" dado que é uma função auxiliar a outras funções neste mesmo ficheiro.
+ @note Esta função não é prototipada no ficheiro "header" dado que é uma função auxiliar a outras funções neste mesmo ficheiro.
 */
 void swap(int *ptrX, int *ptrY)
 {
@@ -247,7 +287,7 @@ void sortSimetricArray(int array[N])
  * @param addedValues Vetor a analisar.
  * @param value Elemento a procurar no vetor "addedValues".
  * 
- * @note Esta função não é prototipada no ficheiro "header" (functions-team-5.h) dado que é uma função auxiliar à função "gt2AndDivisibleBy5", localizada logo abaixo desta.
+ * @note Esta função não é prototipada no ficheiro "header" (functions-team-15.h) dado que é uma função auxiliar à função "gt2AndDivisibleBy5", localizada logo abaixo desta.
  * 
  * @returns 0 (zero), caso o valor já se encontre no vetor passado como primeiro parâmetro formal.
  * @returns 1, caso o valor ainda não se encontre no vetor passado como primeiro parâmetro formal.
@@ -360,7 +400,7 @@ void mixArrays(int array[N])
  * @param length Tamanho do vetor.
  * @param array Vetor cujos valores serão anulados.
  * 
- * @note Esta função não é prototipada no ficheiro "header" (functions-team-5.h) dado que é uma função auxiliar a outras funções neste mesmo ficheiro.
+ * @note Esta função não é prototipada no ficheiro "header" (functions-team-15.h) dado que é uma função auxiliar a outras funções neste mesmo ficheiro.
  */
 void resetArray(int length, int array[length])
 {

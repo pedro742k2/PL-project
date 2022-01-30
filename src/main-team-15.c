@@ -5,6 +5,10 @@
  * ## Descrição
  * - Programa que calcula várias estatísticas e operações baseadas num vetor introduzido pelo utilizador.
  * 
+ * ## Compilação e execução do programa
+ * - ``make`` para compilar;
+ * - `make execute` para compilar e executar;
+ * 
  * ## Constituição do grupo
  * | Nome              | Número |
  * |:-----------------:|:------:|
@@ -48,7 +52,8 @@ int main(int argc, char *argv[])
 		// Compara a string argv[i] (i-ésimo elemento vetor de argumentos) com a string "--help". Caso verdadeiro, retorna 0 (zero).
 		if (!strcmp(argv[i], "--help"))
 		{
-			printf("HELP PAGE!\n");
+			helpPageRequest();
+			return 0;
 		}
 	}
 
@@ -116,21 +121,25 @@ int main(int argc, char *argv[])
 			break;
 
 		case 7:
+			helpPageRequest();
+			break;
+
+		case 8:
 			// Mistura o vetor original com um novo vetor.
 			mixArrays(array);
 			break;
 
-		case 8:
+		case 9:
 			// Decompõe os números ímpares do vetor original em números primos.
 			decomposeInPrimeNumbers(array);
 			break;
 
-		case 9:; // O ponto e vírgula tem como função terminar a "label" do "case", dado que está a ser declarada uma variável logo a seguir à declaração do "case".
+		case 10:; // O ponto e vírgula tem como função terminar a "label" do "case", dado que está a ser declarada uma variável logo a seguir à declaração do "case".
 			// Cálcula a matriz 18x18 resultante do produto do vetor inicial com o mesmo vetor ordenado por ordem crescente.
 			matrix = multiplyTwoArrays(array);
 			break;
 
-		case 10:
+		case 11:
 			// Cálcula a matriz transposta obtida a partir da matriz calculada na opção anterior (nove)
 			// Impressão da matriz inicial obtida na opção anterior (nove).
 			printf("Matriz inicial:\n");

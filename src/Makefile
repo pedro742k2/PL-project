@@ -3,14 +3,14 @@
 OUTPUT = program.exe
 MAIN_DEPENDENCIES = main-team-15.o functions-team-15.o
 
-execute : $(OUTPUT)
-
 $(OUTPUT) : $(MAIN_DEPENDENCIES)
-	gcc $^ -o $@ -lm
-	./$@
+	gcc $^ -o $@ -lm -Wall
 
 %.o : %.c
 	gcc $< -c
+
+execute : $(OUTPUT)
+	./$<
 
 clean : 
 	rm *.o *.exe *.out
