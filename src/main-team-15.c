@@ -2,7 +2,8 @@
  * @mainpage
  * # 💻 Projeto - Laboratórios de Programação
  * 
- * # 💼 Trabalho de grupo
+ * ## Descrição
+ * - Programa que calcula várias estatísticas e operações baseadas num vetor introduzido pelo utilizador.
  * 
  * ## Constituição do grupo
  * | Nome              | Número |
@@ -68,7 +69,7 @@ int main(int argc, char *argv[])
 	printf("Vetor = ");
 	printArray(array, 0, N, 1);
 
-	//! Reserva de memória para a matriz das opções 9 e 10.
+	// Reserva de memória para a matriz das opções 9 e 10.
 	int **matrix = malloc(sizeof(int *) * N);
 	for (int i = 0; i < N; i++)
 	{
