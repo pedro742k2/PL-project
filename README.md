@@ -1,1 +1,33 @@
-# 💻 Projeto - Laboratórios de Programação
+# 💻 Programming Laboratories - CS Project
+
+## ℹ️ About
+
+This is a small project developed on the Programming Laboratories class, in a computer science bachelors course.
+
+## 🗃️ Installation
+
+To install this project on your machine, clone the repository using HTTPS, SSH or GitHub CLI into a local directory or, alternatively, download the files directly.
+
+## ⚙️ Automated Compilation and Execution (using a Makefile)
+
+After cloning the repository, access the folder named "**src**" (source code) and follow the instructions bellow:
+
+| Compile | Compile and execute   | Execute                                                                                 |
+|:-------:|:---------------------:|:---------------------------------------------------------------------------------------:|
+| `make`  | `make execute`        | `make execute` (ignores the compilation process if the output file is already existing) |
+
+## 🪛 Manual Compilation and Execution:
+
+After cloning the repository, access the folder named "**src**" (source code) and follow the instructions bellow:
+
+1. **Linking:** `gcc -c main.c functions.c`
+2. **Compiling:** `gcc main.o functions.o -o program.exe -lm -Wall`
+3. **Executing:** `./program.exe`
+
+## 🆘 Help page
+
+Run `make help` at the "**src**" (source code) folder to check the helping page. This command will link, compile and execute the program using the flag "**--help**".
+
+## 🧹 Clean output files from the compilation process (using Makefile)
+
+Run `make clean` at the "**src**" (source code) folder to remove every output file. This command will remove every file whose extension is ".o" ".exe" or ".out". 
