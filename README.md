@@ -4,6 +4,10 @@
 
 This is a small project developed on the Programming Laboratories class, in a computer science bachelors course.
 
+The project consists of a small program that initially writes an array of N (defined **macro** at "functions.h" headers file) elements, given by the user, which are stored to perform certain mathematical operations over them (elements) or the array as a whole.
+
+Please note that the program itself is in portuguese.
+
 ## 🗃️ Installation
 
 To install this project on your machine, clone the repository using HTTPS, SSH or GitHub CLI into a local directory or, alternatively, download the files directly.
@@ -27,6 +31,8 @@ After cloning the repository, access the folder named "**src**" (source code) an
 ## 🆘 Help page
 
 Run `make help` at the "**src**" (source code) folder to check the helping page. This command will link, compile and execute the program using the flag "**--help**".
+
+An helping page can also be found at the main menu of the program.
 
 ## 🧹 Clean output files from the compilation process (using Makefile)
 
