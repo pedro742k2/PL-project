@@ -1,46 +1,46 @@
 /**
  * @mainpage
  * # 💻 Projeto - Laboratórios de Programação
- * 
+ *
  * ## Descrição
  * - Programa que calcula várias estatísticas e operações baseadas num vetor introduzido pelo utilizador.
- * 
+ *
  * ## Compilação e execução do programa
  * - ``make`` para compilar;
  * - `make execute` para compilar e executar;
- * 
+ *
  * ## Constituição do grupo
  * | Nome              | Número |
  * |:-----------------:|:------:|
  * | Pedro Batista     | 48389  |
  * | Afonso Ferreira   | 48277  |
  * | Diogo Silva       | 47564  |
- * 
+ *
  * ## Características
  * | Número do grupo   | Código do trabalho |
  * |:-----------------:|:------------------:|
  * | 15                | FB85BD             |
- * 
- * @file main-team-15.c
+ *
+ * @file main.c
  * @authors Pedro Batista, Afonso Ferreira, Diogo Silva
  * @brief Programa que realiza operações matemáticas.
  * @details Programa que calcula várias estatísticas ou operações baseadas num vetor introduzido pelo utilizador.
  * @version 0.1
  * @date 2022-01-29
- * 
+ *
  * @copyright Copyright (c) 2022
  */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "functions-team-15.h"
+#include "functions.h"
 
 /**
  * @brief Função principal
- * 
+ *
  * @param argc é o número de argumentos formais recebidos na função main.
  * @param argv é o vetor de argumentos formais recebidos na função main.
- * 
+ *
  * @return 0, caso o programa termine sem input do utilizador.
  * @return 1, caso o utilizador decida sair do programa pelo menu ou o preenchimento do vetor falhe.
  */

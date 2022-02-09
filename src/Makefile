@@ -1,7 +1,7 @@
 .PHONY : execute clean
 
 OUTPUT = program.exe
-MAIN_DEPENDENCIES = main-team-15.o functions-team-15.o
+MAIN_DEPENDENCIES = main.o functions.o
 
 $(OUTPUT) : $(MAIN_DEPENDENCIES)
 	gcc $^ -o $@ -lm -Wall
@@ -11,6 +11,9 @@ $(OUTPUT) : $(MAIN_DEPENDENCIES)
 
 execute : $(OUTPUT)
 	./$<
+
+help : $(OUTPUT)
+	./$< --help
 
 clean : 
 	rm *.o *.exe *.out

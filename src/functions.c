@@ -1,16 +1,16 @@
 /**
- * @file functions-team-15.c
+ * @file functions.c
  * @authors Pedro Batista, Afonso Ferreira, Diogo Silva
  * @brief Ficheiro com as funções auxiliares.
  * @version 0.1
  * @date 2022-01-29
- * 
- * @copyright Copyright (c) 2022 
+ *
+ * @copyright Copyright (c) 2022
  */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "functions-team-15.h"
+#include "functions.h"
 
 void helpPageRequest(void)
 {
@@ -133,7 +133,7 @@ void printArray2D(int **matrix)
 int printMenu(void)
 {
   // Lista de opções numa matrix de caracteres, com a finalidade de facilitar a manutenção do menu principal, caso sejam adicionadas funcionalidades.
-  // "OPTIONS_NUMBER" é uma macro definida no ficheiro "functions-team-15.h".
+  // "OPTIONS_NUMBER" é uma macro definida no ficheiro "functions.h".
   char optionsList[OPTIONS_NUMBER][255] = {
       "Construir uma matriz do tipo 4xN cujas linhas são constituidas pelos elementos do vetor",
       "Calcular o logaritmo natural dos elementos do vetor",
@@ -283,12 +283,12 @@ void sortSimetricArray(int array[N])
 
 /**
  * @brief verifica se o valor passado como segundo argumento já se encontra no vetor passado como primeiro argumento, com a finalidade de não exibir valores repetidos no terminal.
- * 
+ *
  * @param addedValues Vetor a analisar.
  * @param value Elemento a procurar no vetor "addedValues".
- * 
- * @note Esta função não é prototipada no ficheiro "header" (functions-team-15.h) dado que é uma função auxiliar à função "gt2AndDivisibleBy5", localizada logo abaixo desta.
- * 
+ *
+ * @note Esta função não é prototipada no ficheiro "header" (functions.h) dado que é uma função auxiliar à função "gt2AndDivisibleBy5", localizada logo abaixo desta.
+ *
  * @returns 0 (zero), caso o valor já se encontre no vetor passado como primeiro parâmetro formal.
  * @returns 1, caso o valor ainda não se encontre no vetor passado como primeiro parâmetro formal.
  */
@@ -396,11 +396,11 @@ void mixArrays(int array[N])
 
 /**
  * @brief Anula um array de "length" posições.
- * 
+ *
  * @param length Tamanho do vetor.
  * @param array Vetor cujos valores serão anulados.
- * 
- * @note Esta função não é prototipada no ficheiro "header" (functions-team-15.h) dado que é uma função auxiliar a outras funções neste mesmo ficheiro.
+ *
+ * @note Esta função não é prototipada no ficheiro "header" (functions.h) dado que é uma função auxiliar a outras funções neste mesmo ficheiro.
  */
 void resetArray(int length, int array[length])
 {
