@@ -2,11 +2,11 @@
 
 ## ℹ️ About
 
-This is a small project developed on the Programming Laboratories class, in a computer science bachelors course.
+This is a small project developed on the Programming Laboratories class, in the first cycle of a computer science bachelors course.
 
 The project consists of a small program that initially writes an array of N (defined **macro** at "functions.h" headers file) elements, given by the user, which are stored to perform certain mathematical operations over them (elements) or the array as a whole.
 
-Please note that the program itself is in portuguese.
+Please note that the program itself is written in Portuguese.
 
 ## 🗃️ Installation
 
