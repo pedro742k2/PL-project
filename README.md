@@ -12,7 +12,7 @@ Please note that the program itself is written in Portuguese.
 
 To install this project on your machine, clone the repository using HTTPS, SSH or GitHub CLI into a local directory or, alternatively, download the files directly.
 
-## ⚙️ Automated Compilation and Execution (using a Makefile)
+## ⚙️ Automated Compilation and Execution (using Makefile)
 
 After cloning the repository, access the folder named "**src**" (source code) and follow the instructions bellow:
 
