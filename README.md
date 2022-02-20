@@ -2,7 +2,7 @@
 
 ## ℹ️ About
 
-This is a small project developed in the programming laboratories class, at the first cycle of a computer science bachelors course.
+This is a small project developed in the programming laboratories class, at the first cycle of my computer science bachelors course.
 
 The project consists of a small program that initially writes an array of N (defined **macro** at "functions.h" headers file) elements, given by the user, which are stored to perform certain mathematical operations over them (elements) or the array as a whole.
 
@@ -14,6 +14,8 @@ To install this project on your machine, clone the repository using HTTPS, SSH o
 
 ## ⚙️ Automated Compilation and Execution (using Makefile)
 
+- **Note:** Make sure to have both *C compiler* and *make* installed: `sudo apt install build-essential`.
+
 After cloning the repository, access the folder named "**src**" (source code) and follow the instructions bellow:
 
 | Compile | Compile and execute   | Execute                                                                                 |
@@ -21,6 +23,8 @@ After cloning the repository, access the folder named "**src**" (source code) an
 | `make`  | `make execute`        | `make execute` (ignores the compilation process if the output file is already existing) |
 
 ## 🔧 Manual Compilation and Execution:
+
+- **Note:** Make sure to have the *C compiler* installed: `sudo apt install build-essential`.
 
 After cloning the repository, access the folder named "**src**" (source code) and follow the instructions bellow:
 
