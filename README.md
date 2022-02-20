@@ -20,7 +20,7 @@ After cloning the repository, access the folder named "**src**" (source code) an
 |:-------:|:---------------------:|:---------------------------------------------------------------------------------------:|
 | `make`  | `make execute`        | `make execute` (ignores the compilation process if the output file is already existing) |
 
-## 🪛 Manual Compilation and Execution:
+## 🔧 Manual Compilation and Execution:
 
 After cloning the repository, access the folder named "**src**" (source code) and follow the instructions bellow:
 
